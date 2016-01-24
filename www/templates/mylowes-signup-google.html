@@ -8,7 +8,7 @@
         disabled="disabled" />
       </label>
 
-      <ion-checkbox ng-model="isChecked" style="white-space: normal;">
+      <ion-checkbox ng-model="isChecked">
         I have read, understand and agree to <a href="#">The
         Terms & Conditions of the MyLowe's Program</a>
       </ion-checkbox>
@@ -25,8 +25,28 @@
       $('#email').val(window.user.email);
 
       $('#signup-google').click(function() {
-        window.location = '/#/tab/shop';
-      });
+          // $.post(
+          //   'http://api.lowes.com/customer/registration?api_key=zusuc8y8hdz7wpb9bsm9qu6b',
+          //   { "x_phoneUS": "1221567800",
+          //     "xcred_password1": "passw0rd",
+          //     "xcred_password2": "passw0rd",
+          //     "email1": "nay@espxsdw.com",
+          //     "zipCode": "28117",
+          //     "firstName": "Bob",
+          //     "lastName": "Rob"
+          //   },
+          //   function(data) {
+          //     console.log(data);
+
+          //     window.location = '/#/tab/shop';
+          //   }
+          // );
+          window.location = '/#/tab/shop';
+        });
+
+      // $('#signup-google').click(function() {
+      //   window.location = '/#/tab/shop';
+      // });
     </script>
   </ion-content>
 </ion-view>

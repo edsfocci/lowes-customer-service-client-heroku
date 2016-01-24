@@ -1,5 +1,10 @@
 /* Empty. Add your own CSS if you like */
 #rob-iframe {
-  width: 435px;
-  height: 6200px;
+  width: 433px;
+  height: 6162px;
+}
+
+.iframe-issue {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: scroll !important;
 }

@@ -1,0 +1,32 @@
+<ion-view view-title="Sign Up with Google">
+  <ion-content class="padding">
+    Sign Up with Google
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="email" id="email" placeholder="Email Address"
+        disabled="disabled" />
+      </label>
+
+      <ion-checkbox ng-model="isChecked">
+        I have read, understand and agree to <a href="#">The
+        Terms & Conditions of the MyLowe's Program</a>
+      </ion-checkbox>
+
+      <button id="signup-google" class="button button-block button-calm">
+        Sign Up</button>
+
+      <a href="#">Privacy & Security</a>
+    </div>
+    <div id="name"></div>
+
+
+    <script type="text/javascript">
+      $('#email').val(window.user.email);
+
+      $('#signup-google').click(function() {
+        window.location = '/#/tab/shop';
+      });
+    </script>
+  </ion-content>
+</ion-view>

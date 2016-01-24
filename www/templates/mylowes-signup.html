@@ -18,6 +18,11 @@
         <input type="password" placeholder="Password (Case-Sensitive)" />
       </label>
 
+      <ion-checkbox ng-model="isChecked">
+        I have read, understand and agree to <a href="#">The
+        Terms & Conditions of the MyLowe's Program</a>
+      </ion-checkbox>
+
       <button class="button button-block" disabled="disabled">Sign Up</button>
     </div>
     <div id="name"></div>
@@ -49,10 +54,14 @@
                 imageUrl: profile.getImageUrl(),
                 email: profile.getEmail()
               };
+              window.user = user;
+
               console.log('ID: ' + user.id); // Do not send to your backend! Use an ID token instead.
               console.log('Name: ' + user.name);
               console.log('Image URL: ' + user.imageUrl);
               console.log('Email: ' + user.profile);
+
+              window.location = '/#/tab/mylowes-signup-google';
 
               document.getElementById('name').innerHTML = "Signed in: " +
                   user.name;

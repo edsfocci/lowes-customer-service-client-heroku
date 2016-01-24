@@ -100,6 +100,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'MyLowesSignUpCtrl'
         }
       }
+    })
+
+    .state('tab.mylowes-signup-google', {
+      url: '/mylowes-signup-google',
+      views: {
+        'mylowes': {
+          templateUrl: 'templates/mylowes-signup-google.html',
+          controller: 'MyLowesSignUpGoogleCtrl'
+        }
+      }
     });
 
     // .state('tab.dash', {

@@ -10,7 +10,9 @@ angular.module('starter.controllers', [])
 
 .controller('MyLowesSignInCtrl', function($scope) {})
 
-.controller('MyLowesSignUpCtrl', function($scope) {});
+.controller('MyLowesSignUpCtrl', function($scope) {})
+
+.controller('MyLowesSignUpGoogleCtrl', function($scope) {});
 
 // .controller('DashCtrl', function($scope) {
 // })

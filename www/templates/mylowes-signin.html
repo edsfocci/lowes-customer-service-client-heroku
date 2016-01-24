@@ -1,0 +1,35 @@
+<ion-view view-title="MyLowe's">
+  <ion-content class="padding">
+    <h2>my<strong>lowes</strong></h2>
+
+    Sign In
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="email" placeholder="Email Address" />
+      </label>
+
+      <label class="item item-input">
+        <input type="password" placeholder="Password (Case-Sensitive)" />
+      </label>
+      Forget Your Password?
+
+      <ion-toggle  ng-model="settings.saveEmail">
+        Save Email
+      </ion-toggle>
+
+      <button class="button button-block" disabled="disabled">Sign In</button>
+
+      <hr />
+
+      Don't Have An Account?<br />
+      With a MyLowe's account, track your purchase history, get inspired and
+      more!
+
+      <a class="button button-block button-calm" href="#/tab/mylowes-signup">
+        Sign Up</a>
+    </div>
+
+
+  </ion-content>
+</ion-view>

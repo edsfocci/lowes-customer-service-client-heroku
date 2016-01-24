@@ -42,8 +42,20 @@
         console.log(element.id);
         auth2.attachClickHandler(element, {},
             function(googleUser) {
+              var profile = googleUser.getBasicProfile();
+              var user = {
+                id: profile.getId(),
+                name: profile.getName(),
+                imageUrl: profile.getImageUrl(),
+                email: profile.getEmail()
+              };
+              console.log('ID: ' + user.id); // Do not send to your backend! Use an ID token instead.
+              console.log('Name: ' + user.name);
+              console.log('Image URL: ' + user.imageUrl);
+              console.log('Email: ' + user.profile);
+
               document.getElementById('name').innerHTML = "Signed in: " +
-                  googleUser.getBasicProfile().getName();
+                  user.name;
             }, function(error) {
               alert(JSON.stringify(error, undefined, 2));
             });

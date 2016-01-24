@@ -8,3 +8,7 @@
   -webkit-overflow-scrolling: touch !important;
   overflow: scroll !important;
 }
+
+#email:disabled {
+  color: black;
+}

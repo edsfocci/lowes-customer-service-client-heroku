@@ -3,11 +3,11 @@
     Sign Up
 
     <div class="list list-inset">
-      <button class="button button-block button-balanced">
-        <span class="ion-social-google"></span> Sign Up using Google
+      <button id="google-btn" class="button button-block button-balanced">
+        <span class="ion-social-google"></span> Sign up with Google
       </button>
       <button id="facebook-button" class="button button-block button-positive">
-        <span class="ion-social-facebook"></span> Sign Up using Facebook
+        <span class="ion-social-facebook"></span> Sign up with Facebook
       </button>
 
       <label class="item item-input">
@@ -20,7 +20,36 @@
 
       <button class="button button-block" disabled="disabled">Sign Up</button>
     </div>
+    <div id="name"></div>
 
 
+    <script>
+      var googleUser = {};
+      var startApp = function() {
+        gapi.load('auth2', function(){
+          // Retrieve the singleton for the GoogleAuth library and set up the client.
+          auth2 = gapi.auth2.init({
+            client_id: '105150187043-unh96ra704bc0875kpk2voin9e76cjap.apps.googleusercontent.com',
+            cookiepolicy: 'single_host_origin',
+            // Request scopes in addition to 'profile' and 'email'
+            //scope: 'additional_scope'
+          });
+          attachSignin(document.getElementById('google-btn'));
+        });
+      };
+
+      function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+              document.getElementById('name').innerHTML = "Signed in: " +
+                  googleUser.getBasicProfile().getName();
+            }, function(error) {
+              alert(JSON.stringify(error, undefined, 2));
+            });
+      }
+
+      startApp();
+    </script>
   </ion-content>
 </ion-view>
